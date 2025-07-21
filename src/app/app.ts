@@ -30,6 +30,7 @@ export class App implements OnInit {
     this.getQuote();
   }
 
+  //API integration working
   getQuote(): void {
     this.http
       .get<Quote[]>('https://api.realinspire.live/v1/quotes/random')
@@ -44,4 +45,6 @@ export class App implements OnInit {
     // console.log('Quote added to favorites!', this.quote);
     alert('Quote added to favorites!');
   }
+
+
 }
